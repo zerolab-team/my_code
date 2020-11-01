@@ -1,0 +1,7 @@
+release: python manage.py migrate
+
+web: gunicorn config.wsgi:application
+
+celery: celery -A config.celery_app worker -l INFO
+
+beat: celery -A config.celery_app beat -l INFO

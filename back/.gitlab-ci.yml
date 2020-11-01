@@ -1,0 +1,35 @@
+stages:
+  - deploy
+
+variables:
+  APP_NAME: brcapital
+
+.deploy:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  script:
+    - git-push ssh://dokku@${DOKKU_SERVER}:22/$APP_NAME
+
+deploy to staging:
+  extends: .deploy
+  only:
+    - master
+  environment:
+    name: staging
+    url: https://$APP_NAME.laitprojects.site/
+  variables:
+    DOKKU_SERVER: laitprojects.site
+    APP_NAME: brcapital
+
+deploy to production:
+  extends: .deploy
+  only:
+    - master
+  when: manual
+  environment:
+    name: production
+    url: https://brcapital.io/
+  variables:
+    DOKKU_SERVER: 116.203.77.19
+    APP_NAME: brcapital
+

@@ -1,0 +1,13 @@
+:root {
+  /* Scrollbar */
+  --scrollbar-size: 8px;
+
+  /* Components */
+  --header-height: 60px;
+}
+
+@media (--md) {
+  body {
+    --header-height: 70px;
+  }
+}

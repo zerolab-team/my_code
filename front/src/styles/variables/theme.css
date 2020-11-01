@@ -1,0 +1,110 @@
+:root {
+  /* Color sets */
+  --color-set-1: #fff;
+  --color-set-2: #fafafb;
+  --color-set-3: #f1f1f5;
+  --color-set-4: #e2e2ea;
+  --color-set-5: #d5d5dc;
+  --color-set-6: #b5b5be;
+  --color-set-7: #92929d;
+  --color-set-8: #696974;
+  --color-set-9: #44444f;
+  --color-set-10: #171725;
+
+  /* Color names */
+  --color-white: var(--color-set-1); /* white */
+  --color-mirage: var(--color-set-10); /* black */
+  --color-carnation: #fc5a5a; /* red */
+  --color-malibu: #50b5ff; /* light blue */
+  --color-blue-ribbon: #0062ff; /* dark blue */
+  --color-shamrock: #3dd598; /* light green */
+  --color-sushi: #82c43c; /* green */
+  --color-yellow-orange: #ff974a; /* orange */
+  --color-bright-sun: #ffc542; /* yellow */
+  --color-wisteria: #a461a8; /* purple */
+  --color-carnation-pink: #ff9ad5; /* pink */
+  --color-shark: #1c1c24; /* light dark */
+  --color-woodsmoke: #13131a; /* dark */
+  --color-mischka: #e2e2ea; /* light grey */
+  --color-charade: #292932; /* dark grey */
+
+  /* Base */
+  --base-text-color: var(--color-set-10);
+  --base-bg-color: var(--color-set-1); /* prev var(--color-set-2) */
+  --base-image-filter: grayscale(0);
+
+  /* Components */
+  --header-bg-color: var(--color-set-1);
+  --header-border-color: var(--color-mischka);
+  --aside-bg-color: var(--color-set-2); /* prev var(--color-set-1) */
+  --aside-border-color: var(--color-mischka);
+  --backdrop-color: rgba(23, 23, 37, 0.3);
+  --auth-form-bg-color: var(--color-set-1);
+  --auth-field-bg-color: var(--color-set-2);
+  --auth-field-border-color: var(--color-set-3);
+
+  /* Scrollbar */
+  --scrollbar-track-color: transparent;
+  --scrollbar-handle-color: hsla(0, 0%, 39%, 0.4);
+  --scrollbar-hover-handle-color: hsla(0, 0%, 39%, 0.7);
+  --scrollbar-active-handle-color: rgba(0, 0, 0, 0.6);
+  --scrollbar-border-color: var(--color-set-4);
+
+  /* Tabs */
+  --tab-content-color: var(--color-set-10);
+  --tab-backdrop-color: var(--color-mischka);
+  --tab-shadow-color: rgb(13 20 33 / 0.3);
+
+  /* Switcher */
+  --switcher-backdrop-color: var(--color-set-4);
+  --switcher-active-backdrop-color: var(--color-set-4);
+  --switcher-button-color: var(--color-set-1);
+  --switcher-button-shadow-color: rgb(10 10 10 / 0.3);
+
+  /* Editor */
+  --editor-background-color: var(--color-set-1);
+  --editor-border-color: var(--color-set-4);
+  --editor-box-shadow-color: rgb(13 20 33 / 13%);
+}
+
+body.dark {
+  /* Color names */
+  --color-white: var(--color-set-2);
+
+  /* Base */
+  --base-text-color: var(--color-white);
+  --base-bg-color: var(--color-shark); /* prev var(--color-woodsmoke) */
+  --base-image-filter: grayscale(40%);
+
+  /* Components */
+  --header-bg-color: var(--color-shark);
+  --header-border-color: var(--color-set-9); /* prev charade */
+  --aside-bg-color: var(--color-woodsmoke); /* prev var(--color-shark) */
+  --aside-border-color: var(--color-set-9); /* prev charade */
+  --backdrop-color: rgba(146, 146, 157, 0.3);
+  --auth-form-bg-color: var(--color-shark);
+  --auth-field-bg-color: var(--color-set-9);
+  --auth-field-border-color: var(--color-set-8);
+
+  /* Scrollbar */
+  --scrollbar-handle-color: hsla(0, 0%, 47%, 0.4);
+  --scrollbar-hover-handle-color: hsla(0, 0%, 39%, 0.7);
+  --scrollbar-active-handle-color: hsla(0, 0%, 75%, 0.4);
+  --scrollbar-border-color: var(--color-set-9);
+
+  /* Tabs */
+  --tab-content-color: var(--color-set-2);
+  --tab-backdrop-color: var(--color-set-9);
+  --tab-shadow-color: rgb(0 0 0 / 1);
+
+  /* Switcher */
+  --switcher-backdrop-color: var(--color-set-8);
+  --switcher-active-backdrop-color: var(--color-set-9);
+  --switcher-button-color: var(--color-set-10);
+  --switcher-button-shadow-color: rgb(10 10 10 / 0.75);
+
+  /* Editor */
+  --editor-background-color: var(--color-shark);
+  --editor-border-color: var(--color-set-9);
+  --editor-box-shadow-color: rgb(0 0 0 / 94%);
+}

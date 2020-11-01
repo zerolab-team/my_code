@@ -1,0 +1,84 @@
+{
+  "name": "virtual-programming-laboratory",
+  "version": "1.0.0",
+  "description": "Виртуальная лаборатория по программированию",
+  "author": "Sergey Mirasov",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^2.4.2",
+    "@capacitor/core": "^2.4.2",
+    "@monaco-editor/react": "^3.6.3",
+    "@rehooks/component-size": "^1.0.3",
+    "effector": "^21.2.2",
+    "effector-react": "^21.0.4",
+    "react": "^16.14.0",
+    "react-autosize-textarea": "^7.1.0",
+    "react-collapsed": "^3.0.1",
+    "react-dom": "^16.14.0",
+    "react-feather": "^2.0.8",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^6.9.6",
+    "react-input-autosize": "^2.2.2",
+    "react-modal": "^3.11.2",
+    "react-responsive": "^8.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-tooltip": "^4.2.10",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^2.4.2",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@craco/craco": "^5.7.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "commitlint": "^11.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "postcss-normalize": "^9.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "raw-loader": "^4.0.2",
+    "react-scripts": "^3.4.4"
+  },
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore --write **/*.{html,css,js*,yml,md}",
+    "lint": "eslint src --fix --ext js,jsx",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions and supports es6-module"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 ff version"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{html,css,js*,yml,md}": "npx prettier --ignore-path .gitignore --write"
+  }
+}

@@ -1,0 +1,8 @@
+-r base.txt
+
+gunicorn==20.0.4  # https://github.com/benoitc/gunicorn
+sentry-sdk==0.17.6  # https://github.com/getsentry/sentry-python
+
+# Django
+django-s3-storage==0.13.4  # https://github.com/etianen/django-s3-storage
+django-anymail[mailgun]==8.0  # https://github.com/anymail/django-anymail

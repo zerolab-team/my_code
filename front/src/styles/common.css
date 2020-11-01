@@ -1,0 +1,71 @@
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@custom-selector :--fields input, select, textarea;
+@custom-selector :--lists ol, ul;
+
+:--headings {
+  margin: 0;
+  font-weight: 400;
+}
+
+:--fields {
+  padding: 0;
+  outline: none;
+}
+
+:--lists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Montserrat, system-ui;
+  font-size: 16px;
+  background-color: var(--base-bg-color);
+  color: var(--base-text-color);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  font-family: Montserrat, system-ui;
+  font-size: 16px;
+  color: var(--base-text-color);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  /* &:hover {
+    text-decoration: underline;
+  } */
+}
+
+textarea {
+  resize: none;
+  outline: 0;
+  border: none;
+}
+
+input {
+  color: var(--base-text-color);
+}
+
+img {
+  display: flex;
+
+  &:not([src*='.svg']) {
+    filter: var(--base-image-filter);
+  }
+}

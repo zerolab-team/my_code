@@ -1,0 +1,29 @@
+* {
+  scrollbar-color: hsla(0, 0%, 47%, 0.4) var(--scrollbar-track-color);
+  scrollbar-width: thin;
+}
+
+/* Size */
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+  border-left: 1px solid var(--scrollbar-border-color);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-handle-color);
+
+  &:hover {
+    background: var(--scrollbar-hover-handle-color);
+  }
+
+  &:active {
+    background: var(--scrollbar-active-handle-color);
+  }
+}
